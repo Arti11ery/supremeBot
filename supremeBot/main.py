@@ -58,10 +58,10 @@ class supremeBot(object):
         self.b.select("order[billing_country]", self.info['country'])
 
         self.b.select("credit_card[type]", self.info['card'])
-        self.b.fill("credit_card[cnb]", self.info['number'])
+        self.b.fill("credit_card[nlb]", self.info['number'])
         self.b.select("credit_card[month]", self.info['month'])
         self.b.select("credit_card[year]", self.info['year'])
-        self.b.fill("credit_card[vval]", self.info['ccv'])
+        self.b.fill("credit_card[rvv]", self.info['ccv'])
         self.b.find_by_css('.terms').click()
         self.b.find_by_value("process payment").click()
 
